@@ -1,0 +1,181 @@
+html {
+  font-family: "Fredoka One", sans-serif;
+}
+
+h1 {
+  color: #990073;
+  transform: rotate(-10deg);
+}
+
+p {
+  color: #c09;
+  max-width: 19em;
+  transform: rotate(-6deg);
+  margin: .5em;
+}
+
+.btn-ghost {
+  border-color: #990073;
+  color: #c09;
+  margin-left: .5em;
+}
+
+.btn-ghost:hover {
+  border-color: #990073;
+  color: #c09;
+  background-color: rgba(153, 0, 115, .2);
+}
+
+.banner {
+  padding-left: 3em;
+  padding-top: 3em;
+  padding-bottom: 5em;
+  background-image: repeating-linear-gradient(-33deg, #c9fcff, #c9fcff 9px, #d4fdff 9px, #d4fdff 20px);
+  overflow: hidden;
+  border-top: 10px solid #b3fbff;
+  border-bottom: 10px solid #b3fbff;
+  height: 500px;
+}
+
+img {
+  position: absolute;
+}
+
+.ice-cream {
+  position: relative;
+}
+
+.text {
+  transform-origin: left center;
+  text-shadow: 1px 2px rgba(0, 0, 0, .2);
+  margin: 0;
+  animation: fade .5s .5s linear forwards;
+  opacity: 0;
+}
+
+.cone {
+  animation: cone 300ms linear forwards;
+  width: 180px;
+  top: 245px;
+  z-index: 20;
+  left: calc(50% - 110px);
+}
+
+.mint-chip {
+  animation: mint-chip 400ms linear forwards;
+  width: 180px;
+  top: 140px;
+  z-index: 7;
+  left: calc(50% - 110px);
+}
+
+.chocolate-chip {
+  animation: chocolate-chip 500ms linear forwards;
+  width: 180px;
+  top: 50px;
+  z-index: 8;
+  left: calc(50% - 105px);
+}
+
+.vanilla-fudge {
+  animation: vanilla-fudge 600ms linear forwards;
+  width: 180px;
+  top: -30px;
+  z-index: 9;
+  left: calc(50% - 115px);
+}
+
+.cherry {
+  animation: cherry 700ms linear forwards;
+  width: 150px;
+  top: -85px;
+  z-index: 10;
+  left: calc(50% - 100px);
+}
+
+@media only screen and (min-width: 90em) {
+
+  .banner {
+    padding-left: 10em;
+    padding-right: 10em;
+  }
+
+  .text {
+    padding-top: 2em;
+  }
+
+}
+
+@keyframes fade {
+
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+
+}
+
+@keyframes cone {
+
+  0% {
+    top: -100px;
+  }
+
+  100% {
+    top: 245px;
+  }
+
+}
+
+@keyframes mint-chip {
+
+  0% {
+    top: -1000px;
+  }
+
+  100% {
+    top: 140px;
+  }
+
+}
+
+@keyframes chocolate-chip {
+
+  0% {
+    top: -1000px;
+  }
+
+  100% {
+    top: 50px;
+  }
+
+}
+
+@keyframes vanilla-fudge {
+
+  0% {
+    top: -1000px;
+  }
+
+  100% {
+    top: -30px;
+  }
+
+}
+
+@keyframes cherry {
+
+  0% {
+    top: -1000px;
+  }
+
+  100% {
+    top: -85px;
+  }
+
+}
