@@ -26,85 +26,100 @@ p {
   background-color: rgba(153, 0, 115, .2);
 }
 
-.banner {
-  padding-left: 3em;
-  padding-top: 3em;
-  padding-bottom: 5em;
+.outer-banner {
   background-image: repeating-linear-gradient(-33deg, #c9fcff, #c9fcff 9px, #d4fdff 9px, #d4fdff 20px);
-  overflow: hidden;
   border-top: 10px solid #b3fbff;
   border-bottom: 10px solid #b3fbff;
-  height: 500px;
-}
-
-img {
-  position: absolute;
 }
 
 .ice-cream {
   position: relative;
+  min-height: 480px;
 }
 
 .text {
   transform-origin: left center;
   text-shadow: 1px 2px rgba(0, 0, 0, .2);
   margin: 0;
-  animation: fade .5s .5s linear forwards;
+  animation: fade .5s .5s ease-in forwards;
   opacity: 0;
 }
 
 .cone {
-  animation: cone 300ms linear forwards;
-  width: 180px;
-  top: 245px;
-  z-index: 20;
-  left: calc(50% - 110px);
+  z-index: 100;
+  animation: cone 300ms ease-in forwards;
 }
 
 .mint-chip {
-  animation: mint-chip 400ms linear forwards;
-  width: 180px;
-  top: 140px;
-  z-index: 7;
-  left: calc(50% - 110px);
+  animation: mint-chip 300ms 300ms ease-in forwards;
 }
 
 .chocolate-chip {
-  animation: chocolate-chip 500ms linear forwards;
-  width: 180px;
-  top: 50px;
-  z-index: 8;
-  left: calc(50% - 105px);
+  animation: chocolate-chip 300ms 600ms ease-in forwards;
 }
 
 .vanilla-fudge {
-  animation: vanilla-fudge 600ms linear forwards;
-  width: 180px;
-  top: -30px;
-  z-index: 9;
-  left: calc(50% - 115px);
+  animation: vanilla-fudge 200ms 900ms ease-in forwards;
 }
 
 .cherry {
-  animation: cherry 700ms linear forwards;
-  width: 150px;
-  top: -85px;
-  z-index: 10;
-  left: calc(50% - 100px);
+  animation: cherry 150ms 1500ms ease-in forwards;
 }
 
-@media only screen and (min-width: 90em) {
+.scoop {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  height: 180px;
+  width: 180px;
 
-  .banner {
-    padding-left: 10em;
-    padding-right: 10em;
-  }
-
-  .text {
-    padding-top: 2em;
-  }
-
+  transform: translateX(-50%);
 }
+
+/* .mint-chip {
+animation: mint-chip 400ms linear forwards;
+width: 180px;
+top: 140px;
+z-index: 7;
+left: calc(50% - 110px);
+}
+
+.chocolate-chip {
+animation: chocolate-chip 500ms linear forwards;
+width: 180px;
+top: 50px;
+z-index: 8;
+left: calc(50% - 105px);
+}
+
+.vanilla-fudge {
+animation: vanilla-fudge 600ms linear forwards;
+width: 180px;
+top: -30px;
+z-index: 9;
+left: calc(50% - 115px);
+}
+
+.cherry {
+animation: cherry 700ms linear forwards;
+width: 150px;
+top: -85px;
+z-index: 10;
+left: calc(50% - 100px);
+} */
+
+/* @media only screen and (min-width: 90em) {
+
+.banner {
+padding-left: 10em;
+padding-right: 10em;
+}
+
+.text {
+padding-top: 2em;
+}
+
+} */
 
 @keyframes fade {
 
@@ -123,11 +138,11 @@ img {
 @keyframes cone {
 
   0% {
-    top: -100px;
+    bottom: 100%;
   }
 
   100% {
-    top: 245px;
+    bottom: 0;
   }
 
 }
@@ -135,11 +150,11 @@ img {
 @keyframes mint-chip {
 
   0% {
-    top: -1000px;
+    bottom: 100%;
   }
 
   100% {
-    top: 140px;
+    bottom: 104px;
   }
 
 }
@@ -147,11 +162,11 @@ img {
 @keyframes chocolate-chip {
 
   0% {
-    top: -1000px;
+    bottom: 100%;
   }
 
   100% {
-    top: 50px;
+    bottom: 190px;
   }
 
 }
@@ -159,11 +174,11 @@ img {
 @keyframes vanilla-fudge {
 
   0% {
-    top: -1000px;
+    bottom: 100%;
   }
 
   100% {
-    top: -30px;
+    bottom: 265px;
   }
 
 }
@@ -171,11 +186,47 @@ img {
 @keyframes cherry {
 
   0% {
-    top: -1000px;
+    bottom: 100%;
   }
 
   100% {
-    top: -85px;
+    bottom: 345px;
   }
 
 }
+
+/* @keyframes chocolate-chip {
+
+0% {
+top: -1000px;
+}
+
+100% {
+top: 50px;
+}
+
+}
+
+@keyframes vanilla-fudge {
+
+0% {
+top: -1000px;
+}
+
+100% {
+top: -30px;
+}
+
+}
+
+@keyframes cherry {
+
+0% {
+top: -1000px;
+}
+
+100% {
+top: -85px;
+}
+
+} */
